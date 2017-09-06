@@ -12,6 +12,12 @@ maxdf=60000.0
 step=500
 ast=100
 addphaseshift="no"
+
+input=$name".mrc"
+echo $input
+output=$name"_out.mrc"
+echo $output
+
 for input_fn in /home/amedee/relion21_tutorial/betagal/MotionCorr/job009/Micrographs/*.mrc
 do
 /programs/x86_64-linux/ctffind4/4.1.5/bin/ctffind > gc_${i%.mrc}_sum_ctffind4_orig.log << eof
