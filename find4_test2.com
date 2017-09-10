@@ -18,10 +18,10 @@ echo $input
 output=$name"_out.mrc"
 echo $output
 
-for input_fn in /home/amedee/relion21_tutorial/betagal/MotionCorr/job009/Micrographs/*.mrc
+for input in /path/*.mrc
 do
 /programs/x86_64-linux/ctffind4/4.1.5/bin/ctffind > gc_${i%.mrc}_sum_ctffind4_orig.log << eof
-$input_fn
+$input
 $output
 $pxsize
 $voltage
